@@ -7,15 +7,15 @@ function log::info() {
 }
 
 function log::warn() {
-    local _green="\033[33m"
+    local _yellow="\033[33m"
     local _normal="\033[0m"
-    echo -e "${_green}WARN:${_normal} ${@}"
+    echo -e "${_yellow}WARN:${_normal} ${@}"
 }
 
 function log::error() {
-    local _green="\033[31m"
+    local _red="\033[31m"
     local _normal="\033[0m"
-    echo -e "${_green}ERROR:${_normal} ${@}"
+    echo -e "${_red}ERROR:${_normal} ${@}"
 }
 
 function log::prefix() {
