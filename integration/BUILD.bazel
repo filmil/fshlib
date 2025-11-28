@@ -1,0 +1,13 @@
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
+
+sh_test(
+    name = "test",
+    srcs = [
+        "test.bash",
+    ],
+    deps = [
+        "@fshlib//:log",
+        "@bazel_tools//tools/bash/runfiles",
+    ],
+    size = "small",
+)
