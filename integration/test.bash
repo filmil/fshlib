@@ -1,14 +1,6 @@
 #! /usr/bin/env bash
 set -eo pipefail
 
-readonly _binary_path="rules_multitool~~multitool~multitool/tools/gotopt2/gotopt2"
-
-ROOT_DIR="."
-if [[ "${RUNFILES_DIR}" != "" ]]; then
-  ROOT_DIR="${RUNFILES_DIR}/_main"
-fi
-
-
 # --- begin runfiles.bash initialization ---
 # Copy-pasted from Bazel's Bash runfiles library (tools/bash/runfiles/runfiles.bash).
 if [[ ! -d "${RUNFILES_DIR:-/dev/null}" && ! -f "${RUNFILES_MANIFEST_FILE:-/dev/null}" ]]; then
@@ -36,4 +28,6 @@ source "$(rlocation fshlib/log.bash)"
 log::info "Hello"
 log::warn "Hello"
 log::error "Hello"
+
+log::error "Hello" | log::prefix "[prefix] "
 
