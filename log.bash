@@ -24,7 +24,7 @@ function log::prefix() {
 }
 
 function log::debug() {
-    if [[ "${DEBUG}" == "true" || "${DEBUG}" == "log" ]]; then
+    if [[ "${DEBUG:-}" == "true" || "${DEBUG:-}" == "log" ]]; then
         local _color="\033[33m"
         local _normal="\033[0m"
     echo -e "${_color}XXX: DEBUG:${_normal} ${@}"
