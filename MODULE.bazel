@@ -7,4 +7,4 @@ module(
 bazel_dep(name = "rules_shell", version = "0.8.0")
 
 
-bazel_dep(name = "protobuf", version = "34.1")
+bazel_dep(name = "protobuf", version = "35.1")
